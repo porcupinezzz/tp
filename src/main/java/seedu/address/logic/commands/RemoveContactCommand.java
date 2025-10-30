@@ -54,7 +54,7 @@ public class RemoveContactCommand extends Command {
         Contact contact = lastShownList.get(contactIndex.getZeroBased());
 
         //check for existing contracts
-        if (!contact.getContracts().isEmpty()) {
+        if (contact.hasNoContracts()) {
             String existingContractIds = contact.getContractIdsAsString();
             throw new CommandException(String.format(MESSAGE_REMOVE_CONTACT_PENDING, existingContractIds));
         }

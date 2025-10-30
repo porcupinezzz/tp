@@ -116,6 +116,14 @@ public class Contact {
     }
 
     /**
+     * Returns true if contacts have no contract
+     */
+    public boolean hasNoContracts() {
+        assert contracts != null;
+        return contracts.isEmpty();
+    }
+
+    /**
      * Adds a contract to the contact's set of contracts.
      * @param contract The contract to be added.
      */
